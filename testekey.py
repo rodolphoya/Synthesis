@@ -6,43 +6,91 @@ Created on Tue Nov 12 17:01:35 2013
 """
 
 from audiolazy import *
+import pygame
+from pygame.locals import *
+ 
+nota = 0 
+anterior = 0
+freq = 0
 
 rate = 44100
 s,Hz=sHz(rate)
 ms = 1e-3*s
 player = AudioIO()
 
+DFreq = {1 : 131.00,
+        2 : 138.59,
+        3 : 146.83,
+        4 : 155.56,
+        5 : 164.81,
+        6 : 174.61,
+        7 : 185.00,
+        8 : 196.00,
+        9 : 207.55,
+        10 : 220.00,
+        11 : 233.08,
+        12 : 246.94,
+        13 : 261.63,
+        }
+
+#pega as entradas e toca 
+def main():
+        global nota
+        global anterior
+        global freq
+        
+        
+        pygame.init()
+        clock = pygame.time.Clock()
+        joysticks = []
+        for i in range(0, pygame.joystick.get_count()):
+                joysticks.append(pygame.joystick.Joystick(i))
+                joysticks[-1].init()
+                print "Detected joystick '",joysticks[-1].get_name(),"'"
+        while 1:
+                clock.tick(60)
+                for event in pygame.event.get():
+                        if event.type == QUIT:
+                                print "Received event 'Quit', exiting."
+                                return
+                        elif event.type == KEYDOWN and event.key == K_ESCAPE:
+                                print "Escape key pressed, exiting."
+                                return
+                        elif event.type == KEYDOWN:
+                                print "Keydown,",event.key
+                        elif event.type == KEYUP:
+                                print "Keyup,",event.key   
+                        elif event.type == JOYBUTTONDOWN:
+                                #print "Joystick '",joysticks[event.joy].get_name(),"' button",event.button,"down."
+                                #anterior = 0                              
+                                freq = DFreq [event.button + 1]                                
+                        elif event.type == JOYBUTTONUP:
+                                #print "Joystick '",joysticks[event.joy].get_name(),"' button",event.button,"up."                     
+                                nota = -1 * nota
+                                anterior = nota
+                                nota = event.button                                
+                                freq = -1 * DFreq [event.button + 1]
+                        if anterior != nota:
+                                print freq
+                                
+                
+                
+                
+                
+                
+if __name__ == "__main__":
+        main()
+        
+
 
 freq = 0
-nota = input("Digite o numero da nota desejada")
+nota = input("Digite o numero da nota desejada (1 a 13)")
 
-if nota == 1:
-     freq = 131
-if nota == 2:
-    freq = 138.59
-if nota == 3:
-    freq = 146.83
-if nota == 4:
-    freq = 155.56
-if nota == 5:
-    freq = 164.81
-if nota == 6:
-    freq = 174.61
-if nota == 7:
-    freq = 185.00
-if nota == 8:
-    freq = 196.00
-if nota == 9:
-    freq = 207.65
-if nota == 10:
-    freq = 220.00
-if nota == 11:
-    freq = 233.08
-if nota == 12:
-    freq = 246.94
-if nota == 13:
-    freq = 261.63    
+
+
     
+    
+freq = DFreq [nota]
 print freq
 
 signal = comb(freq_to_lag(freq * Hz), .99).linearize()(white_noise(10 * ms).append(0)).limit(7 * s)
