@@ -33,12 +33,10 @@ DFreq = {1 : 131.00,
         13 : 261.63,
         }
 
-#pega as entradas e toca 
 def main():
         global nota
         global anterior
         global freq
-        
         
         pygame.init()
         clock = pygame.time.Clock()
@@ -50,55 +48,11 @@ def main():
         while 1:
                 clock.tick(60)
                 for event in pygame.event.get():
-                        if event.type == QUIT:
-                                print "Received event 'Quit', exiting."
-                                return
-                        elif event.type == KEYDOWN and event.key == K_ESCAPE:
-                                print "Escape key pressed, exiting."
-                                return
-                        elif event.type == KEYDOWN:
-                                print "Keydown,",event.key
-                        elif event.type == KEYUP:
-                                print "Keyup,",event.key   
-                        elif event.type == JOYBUTTONDOWN:
-                                #print "Joystick '",joysticks[event.joy].get_name(),"' button",event.button,"down."
-                                #anterior = 0                              
-                                freq = DFreq [event.button + 1]                                
-                        elif event.type == JOYBUTTONUP:
-                                #print "Joystick '",joysticks[event.joy].get_name(),"' button",event.button,"up."                     
-                                nota = -1 * nota
-                                anterior = nota
-                                nota = event.button                                
-                                freq = -1 * DFreq [event.button + 1]
-                        if anterior != nota:
-                                print freq
-                                
-                
-                
-                
-                
-                
+                        if event.type == JOYBUTTONDOWN:
+                                freq = DFreq [event.button + 1]
+                                signal = comb(freq_to_lag(freq * Hz), .99).linearize()(white_noise(10 * ms).append(0)).limit(2 * s)
+                                filt = 0.001/(1 - 1.24148 * z**-1 + 0.056845 * z**-2 + 0.0437731 * z**-3 + 0.0337219 * z**-4 + 0.0259962 * z**-5 + 0.0200621 * z**-6 + 0.0155093 * z**-7 + 0.0120234 * z**-8 + 0.00936348 * z**-9 + 0.0073461 * z**-10 + 0.00583213 * z**-11 + 0.00471728 * z**-12 + 0.00392492 * z**-13 + 0.00340072 * z**-14 + 0.00310888 * z**-15 - 0.00275325 * z** -16)
+                                player.play(filt(signal),rate = rate)                                
+                                #print freq                             
 if __name__ == "__main__":
         main()
-        
-
-
-freq = 0
-nota = input("Digite o numero da nota desejada (1 a 13)")
-
-
-
-    
-    
-freq = DFreq [nota]
-print freq
-
-signal = comb(freq_to_lag(freq * Hz), .99).linearize()(white_noise(10 * ms).append(0)).limit(7 * s)
-
-filt = 0.001/(1 - 1.24148 * z**-1 + 0.056845 * z**-2 + 0.0437731 * z**-3 + 0.0337219 * z**-4 + 0.0259962 * z**-5 + 0.0200621 * z**-6 + 0.0155093 * z**-7 + 0.0120234 * z**-8 + 0.00936348 * z**-9 + 0.0073461 * z**-10 + 0.00583213 * z**-11 + 0.00471728 * z**-12 + 0.00392492 * z**-13 + 0.00340072 * z**-14 + 0.00310888 * z**-15 - 0.00275325 * z**  -16)
-
-player.play(filt(signal),rate = rate)
-
-
-
-
