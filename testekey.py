@@ -49,10 +49,15 @@ def main():
                 clock.tick(60)
                 for event in pygame.event.get():
                         if event.type == JOYBUTTONDOWN:
-                                freq = DFreq [event.button + 1]
-                                signal = comb(freq_to_lag(freq * Hz), .99).linearize()(white_noise(10 * ms).append(0)).limit(2 * s)
-                                filt = 0.001/(1 - 1.24148 * z**-1 + 0.056845 * z**-2 + 0.0437731 * z**-3 + 0.0337219 * z**-4 + 0.0259962 * z**-5 + 0.0200621 * z**-6 + 0.0155093 * z**-7 + 0.0120234 * z**-8 + 0.00936348 * z**-9 + 0.0073461 * z**-10 + 0.00583213 * z**-11 + 0.00471728 * z**-12 + 0.00392492 * z**-13 + 0.00340072 * z**-14 + 0.00310888 * z**-15 - 0.00275325 * z** -16)
-                                player.play(filt(signal),rate = rate)                                
+                                
+                                freq = DFreq [event.button + 1]                                
+                                N = freq_to_lag(freq * Hz)                                
+                                smix = Streamix()
+                                smix.add(0, white_noise(N))
+                                smix.add(N, 0.99 * smix.copy())
+                                smix.limit(2 * s)
+                                filt = 0.01/(1 - 1.24148 * z**-1 + 0.056845 * z**-2 + 0.0437731 * z**-3 + 0.0337219 * z**-4 + 0.0259962 * z**-5 + 0.0200621 * z**-6 + 0.0155093 * z**-7 + 0.0120234 * z**-8 + 0.00936348 * z**-9 + 0.0073461 * z**-10 + 0.00583213 * z**-11 + 0.00471728 * z**-12 + 0.00392492 * z**-13 + 0.00340072 * z**-14 + 0.00310888 * z**-15 - 0.00275325 * z** -16)
+                                player.play(filt(smix),rate = rate)                                
                                 #print freq                             
 if __name__ == "__main__":
         main()
