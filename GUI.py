@@ -268,7 +268,7 @@ class Ui_MainWindow(object):
         self.actionClose.setText(_translate("MainWindow", "Close", None))
 
 from PyQt4 import Qwt5
-import res_rc
+
 
 if __name__ == "__main__":
     import sys
