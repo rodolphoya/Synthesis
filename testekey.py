@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Nov 12 17:01:35 2013
 
-@author: WIN7
 """
+SINTETIZADOR - Projeto PSI 2222
+
+Grupo 8:
+José Henrique, Elisa, Gabriela, Rodolpho
+
+Orientador: Danilo Benelli
+"""
+
 from audiolazy import *
 import pygame
 from pygame.locals import * 
@@ -11,7 +16,6 @@ import pygame.midi
 from pygame.locals import *
 
 nota = 0 
-anterior = 0
 freq = 0
 rate = 44100
 s,Hz=sHz(rate)
@@ -28,7 +32,8 @@ i = pygame.midi.Input( input_id )
 
 #dicionario que relaciona as o numero das teclas do teclado MIDI com
 #a frequencia correspondente de sua nota musical
-DFreq = {36 : 32.703,     
+DFreq = {
+36 : 32.703,     
 37 : 34.648,
 38 : 36.708,
 39 : 38.891,
@@ -91,7 +96,71 @@ DFreq = {36 : 32.703,
 96 : 1046.50,
     }
 
-#GUI
+nota_musical = {
+36 : "C1",     
+37 : "C1#",
+38 : "D1",
+39 : "D1#",
+40 : "E1",
+41 : "F1",
+42 : "F1#",
+43 : "G1",
+44 : "G1#",
+45 : "A1",
+46 : "A1#",
+47 : "B1",
+48 : "C2",
+49 : "C2#",
+50 : "D2",
+51 : "D2#",
+52 : "E2",
+53 : "F2",
+54 : "F2#",
+55 : "G2",
+56 : "G2#",
+57 : "A2",
+58 : "A2#",
+59 : "B2",
+60 : "C3",
+61 : "C3#",
+62 : "D3",
+63 : "D3#",
+64 : "E3",
+65 : "F3",
+66 : "F3#",
+67 : "G3",
+68 : "G3#",
+69 : "A3",
+70 : "A3#",
+71 : "B3",
+72 : "C4",
+73 : "C4#",
+74 : "D4",
+75 : "D4#",
+76 : "E4",
+77 : "F4",
+78 : "F4#",
+79 : "G4",
+80 : "G4#",
+81 : "A4",
+82 : "A4#", 
+83 : "B4",
+84 : "C5",
+85 : "C5#",
+86 : "D5",
+87 : "D5#",
+88 : "E5",
+89 : "F5",
+90 : "F5#",
+91 : "G5",
+92 : "G5#",
+93 : "A5",
+94 : "A5#",
+95 : "B5",
+96 : "C6",
+    }
+    
+#---------------------------------GUI--------------------------------
 
 from PyQt4 import QtCore, QtGui
 
@@ -271,9 +340,11 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
 
-#/GUI
+#--------------------------------/GUI---------------------------------
 
-print "Iniciado, toque o teclado!"
+#----------------------------Sintetizador-----------------------------
+
+print "Iniciado, por favor, toque o teclado!"
     
 def main():
     global nota
@@ -283,55 +354,57 @@ def main():
     
     while 1:
 
-        events = event_get()
         if i.poll():
-            midi_events = i.read(10)
-            pos = midi_events[0][0][2] #Entrada MIDI valor2, que é usado para
-                                       #saber se a nota foi pressionada (DOWN)
-                                       #ou solta (UP).
+            midi_events = i.read(1)
+#           Entrada MIDI valor2, que é usado para saber se a nota foi 
+#            pressionada (DOWN) ou solta (UP).
+            pos = midi_events[0][0][2] 
             
-            note = midi_events[0][0][1] #Entada MIDI valor1, que é usado para
-                                        #saber qual tecla foi pressionada
+#           Entada MIDI valor1, que é usado para saber qual tecla foi
+#           pressionada
+            note = midi_events[0][0][1] 
 
-            #Verifica se a tecla apertada é válida, pos != 0 => a nota foi
-            #pressionada e não solta; note !=0 => uma nota foi pressionada/
-            #solta, na ausência de nota pressionada, o teclado manda continua-
-            #mente a nota 0.            
+#           Verifica se a tecla apertada é válida, pos != 0 => a nota foi
+#           pressionada e não solta; note !=0 => uma nota foi pressionada/
+#           solta, na ausência de nota pressionada, o teclado manda continua-
+#           mente a nota 0.            
             if pos and note:
                 
-                #Pega o valor da frequencia baseado no dicionario acima                
+                print str(midi_events) + " => " + nota_musical [note] + ";    Freq = ", DFreq[note]
+                
+#               Pega o valor da frequencia baseado no dicionario acima                
                 freq = DFreq[note]
-                #A função freq_to_lag converte a frequencia para numero de 
-                #amostras 
+#               A função freq_to_lag converte a frequencia para numero de 
+#               amostras 
                 N = freq_to_lag(freq * Hz)
-                #Preparação do Stream (container definido pelo Audiolazy) no 
-                #qual será aplicado o filtro que aproximará o som ao de um 
-                #violão. O método empregado é semelhante ao do filtro comb
+#               Preparação do Stream (container definido pelo Audiolazy) no 
+#               qual será aplicado o filtro que aproximará o som ao de um 
+#               violão. O método empregado é semelhante ao do filtro comb
                 smix = Streamix()
-                #Cria uma stream de ruído branco baseada no numero de amostras
+#               Cria uma stream de ruído branco baseada no numero de amostras
                 smix.add(0, white_noise(N))
                 smix.add(N, 0.99 * smix.copy())
-                #Limita o tamanho da Stream. Por meio de testes, determinamos 
-                #que 1 segundo é tempo suficiente para se ouvir o som, consi-
-                #derando o decaimento e ajuda em aliviar a quantidade de dados
-                #que serão processados.
-                smix.limit(1 * s)
+#               Limita o tamanho da Stream. Por meio de testes, determinamos 
+#               que 1,5 segundo é tempo suficiente para se ouvir o som, consi-
+#               derando o decaimento e ajuda em aliviar a quantidade de dados
+#               que serão processados.
+                smix.limit(1.5 * s)
                 
-                #Filtro simplificado que 'cria' um som próximo ao do violão.
+#               Filtro simplificado que 'cria' um som próximo ao do violão.
                 filt = 0.01/(1 - 1.46146 * z**-1 + 0.875285 * z**-2 - 0.990911
                 * z**-3 + 0.600283 * z**-4 - 0.021322 * z**-5)
             
-#                Filtro obtido por meio da análise lpc de uma gravação do
-#                som de um violão no formato wav.
-#            Linear predictive coding - 
-#                filt = 0.01/(1 - 1.24148 * z**-1 + 0.056845 * z**-2 + 
-#                0.0437731 * z**-3 + 0.0337219 * z**-4 + 0.0259962 * z**-5 + 
-#                0.0200621 * z**-6 + 0.0155093 * z**-7 + 0.0120234 * z**-8 + 
-#                0.00936348 * z**-9 + 0.0073461 * z**-10 + 0.00583213 * z**-
-#                11 + 0.00471728 * z**-12 + 0.00392492 * z**-13 + 0.00340072 
-#                * z**-14 + 0.00310888 * z**-15 - 0.00275325 * z** -16)
-#                
+#               Filtro obtido por meio da análise lpc (Linear predictive 
+#               coding) de uma gravação do som de um violão no formato wav.
+#               filt = 0.01/(1 - 1.24148 * z**-1 + 0.056845 * z**-2 + 
+#               0.0437731 * z**-3 + 0.0337219 * z**-4 + 0.0259962 * z**-5 + 
+#               0.0200621 * z**-6 + 0.0155093 * z**-7 + 0.0120234 * z**-8 + 
+#               0.00936348 * z**-9 + 0.0073461 * z**-10 + 0.00583213 * z**-
+#               11 + 0.00471728 * z**-12 + 0.00392492 * z**-13 + 0.00340072 
+#               * z**-14 + 0.00310888 * z**-15 - 0.00275325 * z** -16)                
                 player.play(filt(smix),rate = rate)
+
+#----------------------------/Sintetizador----------------------------
                                            
 if __name__ == "__main__":
     main()
