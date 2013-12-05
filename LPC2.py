@@ -11,6 +11,10 @@ from contextlib import closing
 from audiolazy import *
 from numpy.fft import fft
 
+rate = 44100
+s,Hz = sHz(rate)
+ms = 1e-3 * s
+
 
 def gen():
   fname = "C://1 C edit.wav"
