@@ -1,13 +1,12 @@
 
-
 *************************************************************************************
-Sintetizador controlável com a biblioteca AudioLazy (DSP em tempo real para o Python)
+Sintetizador controlï¿½vel com a biblioteca AudioLazy (DSP em tempo real para o Python)
 *************************************************************************************
 
 
 
 
-Número do Projeto: 08
+Nï¿½mero do Projeto: 08
 
 Data: 13 / novembro / 2013
 
@@ -18,60 +17,58 @@ Danilo de Jesus da Silva Bellini
 
 Equipe de alunos:
 
-8041394 – Elisa Tengan Pires de Souza
+8041394 ï¿½ Elisa Tengan Pires de Souza
 
-8041884 – Gabriela Souza de Melo
+8041884 ï¿½ Gabriela Souza de Melo
 
-8042798 – José Henrique Camargo Leopoldo e Silva
+8042798 ï¿½ Josï¿½ Henrique Camargo Leopoldo e Silva
 
-7630594 – Rodolpho Yuiti Adamatsu
+7630594 ï¿½ Rodolpho Yuiti Adamatsu
 
 
 
 Resumo
 ======
 
-O projeto a ser apresentado consiste na elaboração de um sintetizador controlável de áudio por meio de programação fazendo-se uso da linguagem Python. Neste sintetizador de áudio, o objetivo é de simular um som a partir de gravações feitas do som de um violão.
+O projeto a ser apresentado consiste na elaboraï¿½ï¿½o de um sintetizador controlï¿½vel de ï¿½udio por meio de programaï¿½ï¿½o fazendo-se uso da linguagem Python. Neste sintetizador de ï¿½udio, o objetivo ï¿½ de simular um som a partir de gravaï¿½ï¿½es feitas do som de um violï¿½o.
 
-Para a criação deste sintetizador, é imprescindível que tenha-se conhecimento de conceitos relacionados à análise, processamento e síntese de sinais. Desse modo, a etapa inicial do projeto consiste no estudo destes elementos apresentados. 
-O sintetizador baseia-se em um modelo de síntese no qual um algoritmo é aplicado e diversos controles de variáveis de um sinal são realizados para se obter o som similar ao de um violão desejado. Assim que é decidido como deve ser feita a síntese de áudio, é necessário realiza-la em forma de código. A linguagem utilizada é o Python, a qual apresenta várias ferramentas úteis ao projeto, além de ser fácil de ser compreendida em geral. Não obstante, uma biblioteca adicional chamada Audiolazy (criada pelo próprio orientador do projeto) é necessária para a execução do código, visto que ela possui diversos comandos que permitem a manipulação de sinais e também de visualização dos efeitos que cada variação nos parâmetros causa sobre uma onda por meio de gráficos e também pela própria reprodução do som sendo sintetizado. 
+Para a criaï¿½ï¿½o deste sintetizador, ï¿½ imprescindï¿½vel que tenha-se conhecimento de conceitos relacionados ï¿½ anï¿½lise, processamento e sï¿½ntese de sinais. Desse modo, a etapa inicial do projeto consiste no estudo destes elementos apresentados. 
+O sintetizador baseia-se em um modelo de sï¿½ntese no qual um algoritmo ï¿½ aplicado e diversos controles de variï¿½veis de um sinal sï¿½o realizados para se obter o som similar ao de um violï¿½o desejado. Assim que ï¿½ decidido como deve ser feita a sï¿½ntese de ï¿½udio, ï¿½ necessï¿½rio realiza-la em forma de cï¿½digo. A linguagem utilizada ï¿½ o Python, a qual apresenta vï¿½rias ferramentas ï¿½teis ao projeto, alï¿½m de ser fï¿½cil de ser compreendida em geral. Nï¿½o obstante, uma biblioteca adicional chamada Audiolazy (criada pelo prï¿½prio orientador do projeto) ï¿½ necessï¿½ria para a execuï¿½ï¿½o do cï¿½digo, visto que ela possui diversos comandos que permitem a manipulaï¿½ï¿½o de sinais e tambï¿½m de visualizaï¿½ï¿½o dos efeitos que cada variaï¿½ï¿½o nos parï¿½metros causa sobre uma onda por meio de grï¿½ficos e tambï¿½m pela prï¿½pria reproduï¿½ï¿½o do som sendo sintetizado. 
 
-Para o sintetizador de áudio ser utilizado, é necessário implementar o programa criado em Python em uma interface básica para que qualquer indivíduo pudesse compreender seu funcionamento. Primeiramente, o meio a ser controlado pelo usuário do programa escolhido é um teclado musical MIDI, o qual é conectado ao computador por um cabo MIDI-USB. Entretanto,é necessário também que haja uma interface gráfica que relacione o programa ao teclado conectado e portanto foi criado um ambiente simples no qual o programa criado é rodado sendo assim possível fazer uso do sintetizador.
+Para o sintetizador de ï¿½udio ser utilizado, ï¿½ necessï¿½rio implementar o programa criado em Python em uma interface bï¿½sica para que qualquer indivï¿½duo pudesse compreender seu funcionamento. Primeiramente, o meio a ser controlado pelo usuï¿½rio do programa escolhido ï¿½ um teclado musical MIDI, o qual ï¿½ conectado ao computador por um cabo MIDI-USB. Entretanto,ï¿½ necessï¿½rio tambï¿½m que haja uma interface grï¿½fica que relacione o programa ao teclado conectado e portanto foi criado um ambiente simples no qual o programa criado ï¿½ rodado sendo assim possï¿½vel fazer uso do sintetizador.
 
-Por fim, o projeto apresenta uma interessante proposta que ilustra a possibilidade de aplicar conhecimentos de engenharia elétrica e computação não só sobre questões predominantemente científicas, mas também sobre a área de produção artística.
-
-
+Por fim, o projeto apresenta uma interessante proposta que ilustra a possibilidade de aplicar conhecimentos de engenharia elï¿½trica e computaï¿½ï¿½o nï¿½o sï¿½ sobre questï¿½es predominantemente cientï¿½ficas, mas tambï¿½m sobre a ï¿½rea de produï¿½ï¿½o artï¿½stica.
 
 
 
 
 
 
-Conteúdo
+
+
+Conteï¿½do
 ========
 
-1.Introdução
+1.Introduï¿½ï¿½o
 ------------
 
 1.1.Conceitos
 ^^^^^^^^^^^^^
 
 
-Um sintetizador de áudio consiste em um instrumento eletrônico que gera e processa diferentes sons. Nesse projeto, o objetivo é criar tal instrumento por meio de programação e implementá-lo em uma interface básica para ter seu funcionamento em tempo real.
+Um sintetizador de ï¿½udio consiste em um instrumento eletrï¿½nico que gera e processa diferentes sons. Nesse projeto, o objetivo ï¿½ criar tal instrumento por meio de programaï¿½ï¿½o e implementï¿½-lo em uma interface bï¿½sica para ter seu funcionamento em tempo real.
 
-Sendo assim, primeiramente, deve-se pensar em como ocorre o processo de sintetização de áudio para depois poder descrevê-lo em forma de código. Para isso,é necessário que haja o conhecimento de diversos conceitos relacionados à análise, processamento e síntese de sinais. A análise e o processamento consistem no ato de observar e coletar informações importantes que permitam uma manipulação posterior do sinal em questão para cumprir o objetivo designado.
+Sendo assim, primeiramente, deve-se pensar em como ocorre o processo de sintetizaï¿½ï¿½o de ï¿½udio para depois poder descrevï¿½-lo em forma de cï¿½digo. Para isso,ï¿½ necessï¿½rio que haja o conhecimento de diversos conceitos relacionados ï¿½ anï¿½lise, processamento e sï¿½ntese de sinais. A anï¿½lise e o processamento consistem no ato de observar e coletar informaï¿½ï¿½es importantes que permitam uma manipulaï¿½ï¿½o posterior do sinal em questï¿½o para cumprir o objetivo designado.
 
-Já a síntese de sinais trata-se do ato de fabricar o sinal desejado, com as características antes analisadas por meio de manipulação matemática utilizando python, de forma a obtermos a equação do filtro que o corpo do violão produz sobre o som.
+Jï¿½ a sï¿½ntese de sinais trata-se do ato de fabricar o sinal desejado, com as caracterï¿½sticas antes analisadas por meio de manipulaï¿½ï¿½o matemï¿½tica utilizando python, de forma a obtermos a equaï¿½ï¿½o do filtro que o corpo do violï¿½o produz sobre o som.
 
-Após ter conhecimento sobre os processos necessários para a elaboração do sintetizador, foi necessário escolher um som a ser sintetizado. Graças à familiaridade do grupo com instrumentos musicais, foi escolhido o violão para ter suas notas sintetizadas a partir do software a ser criado. Assim, foram gravadas notas isoladas produzidas pelo instrumento em formato .wav (o melhor formato a ser utilizado uma vez que, ao contrário do formato .mp3, não há perdas de sinais de certas freqüências para compressão de arquivo, resultando em maior qualidade).
-Após analisar-se as gravações, o próximo passo é sintetizar, de fato, o som desejado. Para isso, foi necessário ter conhecimento sobre a linguagem Python e a principal biblioteca a ser utilizada no projeto, a Audiolazy. Com suas ferramentas, sinais já existentes podem ser manipulados com aplicações de filtros prontos e também por filtros calculados pelo processo de análise das gravações feito anteriormente. Um filtro altera o sinal original (de forma linear ou não no tempo, isto é, os parâmetros desejados podem ser fixos ou variáveis no tempo) e quando aplicado corretamente, é um importante utensílio para se atingir o sinal determinado.
+Apï¿½s ter conhecimento sobre os processos necessï¿½rios para a elaboraï¿½ï¿½o do sintetizador, foi necessï¿½rio escolher um som a ser sintetizado. Graï¿½as ï¿½ familiaridade do grupo com instrumentos musicais, foi escolhido o violï¿½o para ter suas notas sintetizadas a partir do software a ser criado. Assim, foram gravadas notas isoladas produzidas pelo instrumento em formato .wav (o melhor formato a ser utilizado uma vez que, ao contrï¿½rio do formato .mp3, nï¿½o hï¿½ perdas de sinais de certas freqï¿½ï¿½ncias para compressï¿½o de arquivo, resultando em maior qualidade).
+Apï¿½s analisar-se as gravaï¿½ï¿½es, o prï¿½ximo passo ï¿½ sintetizar, de fato, o som desejado. Para isso, foi necessï¿½rio ter conhecimento sobre a linguagem Python e a principal biblioteca a ser utilizada no projeto, a Audiolazy. Com suas ferramentas, sinais jï¿½ existentes podem ser manipulados com aplicaï¿½ï¿½es de filtros prontos e tambï¿½m por filtros calculados pelo processo de anï¿½lise das gravaï¿½ï¿½es feito anteriormente. Um filtro altera o sinal original (de forma linear ou nï¿½o no tempo, isto ï¿½, os parï¿½metros desejados podem ser fixos ou variï¿½veis no tempo) e quando aplicado corretamente, ï¿½ um importante utensï¿½lio para se atingir o sinal determinado.
 
-Para o modelo de síntese ser aplicável no projeto, escrevemos em Python o código do programa que realiza a síntese. Esse código é  de um meio de ordenar tanto as tarefas necessárias para realizar a síntese do som quanto o modo como ela vai ser aplicada na situação escolhida. Sendo assim, as etapas de associação da nota acionada com a síntese da mesma e também a execução dela são relacionadas, permitindo o funcionamento de um sintetizador em tempo real.
-Entretanto, deve-se considerar ao criar o código em Python a interface a ser utilizada pelo usuário do sintetizador. Como foi escolhido pelo grupo um teclado musical com saída MIDI, houve a necessidade de pensar em um meio de conectá-lo ao computador e associá-lo ao programa. Assim, outra biblioteca adicional do Python chamada Pygame foi útil, visto que permite, de fato, a conexão do teclado com o programa, fazendo com que a cada tecla acionada, uma determinada nota seja executada. Para conectar o teclado musical ao computador, foi utilizado um cabo MIDI-USB.
+Para o modelo de sï¿½ntese ser aplicï¿½vel no projeto, escrevemos em Python o cï¿½digo do programa que realiza a sï¿½ntese. Esse cï¿½digo ï¿½  de um meio de ordenar tanto as tarefas necessï¿½rias para realizar a sï¿½ntese do som quanto o modo como ela vai ser aplicada na situaï¿½ï¿½o escolhida. Sendo assim, as etapas de associaï¿½ï¿½o da nota acionada com a sï¿½ntese da mesma e tambï¿½m a execuï¿½ï¿½o dela sï¿½o relacionadas, permitindo o funcionamento de um sintetizador em tempo real.
+Entretanto, deve-se considerar ao criar o cï¿½digo em Python a interface a ser utilizada pelo usuï¿½rio do sintetizador. Como foi escolhido pelo grupo um teclado musical com saï¿½da MIDI, houve a necessidade de pensar em um meio de conectï¿½-lo ao computador e associï¿½-lo ao programa. Assim, outra biblioteca adicional do Python chamada Pygame foi ï¿½til, visto que permite, de fato, a conexï¿½o do teclado com o programa, fazendo com que a cada tecla acionada, uma determinada nota seja executada. Para conectar o teclado musical ao computador, foi utilizado um cabo MIDI-USB.
 
-A interface gráfica do sintetizador é bem simples, visto que o principal meio de entendimento do funcionamento do instrumento é através do próprio teclado conectado. Assim, foi feito um ambiente simplificado apenas para relacionar o código em Python à funcionalidade do sintetizador controlado pelo mesmo.
-
-
+A interface grï¿½fica do sintetizador ï¿½ bem simples, visto que o principal meio de entendimento do funcionamento do instrumento ï¿½ atravï¿½s do prï¿½prio teclado conectado. Assim, foi feito um ambiente simplificado apenas para relacionar o cï¿½digo em Python ï¿½ funcionalidade do sintetizador controlado pelo mesmo.
 
 
 
@@ -86,17 +83,19 @@ A interface gráfica do sintetizador é bem simples, visto que o principal meio de
 
 
 
-1.2.Motivação e justificação
+
+
+1.2.Motivaï¿½ï¿½o e justificaï¿½ï¿½o
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-O projeto foi sugerido pelo orientador Danilo de Jesus da Silva Bellini (Engenheiro Eletricista pela Poli, Mestre em Computação pelo IME-USP e Músico pela ECA-USP). O grupo se interessou pelo projeto visto que ele envolvia a aplicação de conhecimentos relacionados à engenharia elétrica e de computação em um assunto associado à manipulação de áudio. Uma vez que os integrantes do grupo possuíam grande afinidade com questões principalmente musicais, foi natural que a curiosidade sobre o tema fosse despertada.
+O projeto foi sugerido pelo orientador Danilo de Jesus da Silva Bellini (Engenheiro Eletricista pela Poli, Mestre em Computaï¿½ï¿½o pelo IME-USP e Mï¿½sico pela ECA-USP). O grupo se interessou pelo projeto visto que ele envolvia a aplicaï¿½ï¿½o de conhecimentos relacionados ï¿½ engenharia elï¿½trica e de computaï¿½ï¿½o em um assunto associado ï¿½ manipulaï¿½ï¿½o de ï¿½udio. Uma vez que os integrantes do grupo possuï¿½am grande afinidade com questï¿½es principalmente musicais, foi natural que a curiosidade sobre o tema fosse despertada.
 
-A idéia proposta pode ser desenvolvida de diversas maneiras, e o orientador deu liberdade ao grupo de escolher o som a ser sintetizado e também a interface a ser utilizada, dentre as diversas opções que ele mesmo sugeriu.
+A idï¿½ia proposta pode ser desenvolvida de diversas maneiras, e o orientador deu liberdade ao grupo de escolher o som a ser sintetizado e tambï¿½m a interface a ser utilizada, dentre as diversas opï¿½ï¿½es que ele mesmo sugeriu.
 
 1.3.Metodologia
 ^^^^^^^^^^^^^^^
 
-O projeto, em geral, foi feito a partir de um método de observação de exemplos apresentados pelo orientador e de tentativa de reprodução de idéias similares pelos integrantes do grupo. Durante a maior parte das reuniões, o processo consistia em pequenas aulas sobre os assuntos a serem conhecidos e esclarecimento de dúvidas quanto às etapas de própria execução do projeto. A partir dessas aulas, e de textos e exemplos adicionais, conseguimos começar a compreender como funcionaria o projeto, como ocorria a escrita de códigos em Python, quais os conceitos de processamento digital de sinais que precisávamos saber e como os utilizaríamos de forma a atingir o objetivo final. A partir do momento que já tínhamos alguma base teórica, começamos a escrever o código, nos baseando nos exemplos que já havíamos visto.
+O projeto, em geral, foi feito a partir de um mï¿½todo de observaï¿½ï¿½o de exemplos apresentados pelo orientador e de tentativa de reproduï¿½ï¿½o de idï¿½ias similares pelos integrantes do grupo. Durante a maior parte das reuniï¿½es, o processo consistia em pequenas aulas sobre os assuntos a serem conhecidos e esclarecimento de dï¿½vidas quanto ï¿½s etapas de prï¿½pria execuï¿½ï¿½o do projeto. A partir dessas aulas, e de textos e exemplos adicionais, conseguimos comeï¿½ar a compreender como funcionaria o projeto, como ocorria a escrita de cï¿½digos em Python, quais os conceitos de processamento digital de sinais que precisï¿½vamos saber e como os utilizarï¿½amos de forma a atingir o objetivo final. A partir do momento que jï¿½ tï¿½nhamos alguma base teï¿½rica, comeï¿½amos a escrever o cï¿½digo, nos baseando nos exemplos que jï¿½ havï¿½amos visto.
 
 
 
@@ -107,7 +106,7 @@ O projeto, em geral, foi feito a partir de um método de observação de exemplos a
 
 
 
-2.Cronograma e organização
+2.Cronograma e organizaï¿½ï¿½o
 --------------------------
 
 2.1. Esquema do cronograma
@@ -117,119 +116,119 @@ O projeto, em geral, foi feito a partir de um método de observação de exemplos a
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
     | Etapa /Semana                | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
     +==============================+===+===+===+===+===+===+===+===+===+====+
-    | Familiarização com Python    | X | X | X | X | X | X |   |   |   |    |
+    | Familiarizaï¿½ï¿½o com Python    | X | X | X | X | X | X |   |   |   |    |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
-    | Familiarização com Audiolazy | X | X | X | X | X | X |   |   |   |    |
+    | Familiarizaï¿½ï¿½o com Audiolazy | X | X | X | X | X | X |   |   |   |    |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+ 
     | Estudo T. Processamento de S.| X | X | X | X | X | X |   |   |   |    |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
-    | Estudo de modelos de síntese | X | X | X | X | X | X |   |   |   |    |
+    | Estudo de modelos de sï¿½ntese | X | X | X | X | X | X |   |   |   |    |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
-    | Realização de Gravações      |   |   |   | X | X | X |   |   |   |    |
+    | Realizaï¿½ï¿½o de Gravaï¿½ï¿½es      |   |   |   | X | X | X |   |   |   |    |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
-    | Análise de Gravações         |   |   |   | X | X | X |   |   |   |    |
+    | Anï¿½lise de Gravaï¿½ï¿½es         |   |   |   | X | X | X |   |   |   |    |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
-    | Elaborar Modelo de Síntese   |   |   |   | X | X | X | X |   |   |    |
+    | Elaborar Modelo de Sï¿½ntese   |   |   |   | X | X | X | X |   |   |    |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
-    | Escrita de Código em Python  |   |   |   | X | X | X | X | X | X |    |      
+    | Escrita de Cï¿½digo em Python  |   |   |   | X | X | X | X | X | X |    |      
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
-    | Interface Gráfica            |   |   |   |   | X | X | X | X | X | X  |
+    | Interface Grï¿½fica            |   |   |   |   | X | X | X | X | X | X  |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
-    | Documentação                 | X | X | X | X | X | X | X | X | X | X  |
+    | Documentaï¿½ï¿½o                 | X | X | X | X | X | X | X | X | X | X  |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
 
  
-O cronograma para a realização do projeto foi elaborado da forma apresentada na tabela acima. Para um melhor entendimento, a definição de cada tarefa é apresentada abaixo:
+O cronograma para a realizaï¿½ï¿½o do projeto foi elaborado da forma apresentada na tabela acima. Para um melhor entendimento, a definiï¿½ï¿½o de cada tarefa ï¿½ apresentada abaixo:
 
-•	Familiarização com o Python
+ï¿½	Familiarizaï¿½ï¿½o com o Python
 
-Trata-se do início da aquisição de conhecimento sobre o funcionamento da linguagem Python, sendo enfatizado o aprendizado sobre seus comandos e ferramentas disponíveis que serão úteis para o desenvolvimento do projeto.
+Trata-se do inï¿½cio da aquisiï¿½ï¿½o de conhecimento sobre o funcionamento da linguagem Python, sendo enfatizado o aprendizado sobre seus comandos e ferramentas disponï¿½veis que serï¿½o ï¿½teis para o desenvolvimento do projeto.
 
-•	Familiarização com a Audiolazy
+ï¿½	Familiarizaï¿½ï¿½o com a Audiolazy
 
-Trata-se da aquisição de conhecimento sobre os recursos da biblioteca para Python chamada Audiolazy. Foram realizados diversos exemplos de utilização de comandos de plotagem de resposta em freqüência, aplicação de filtros como o passa-baixas (“lowpass “) e o ressonador (“resonator”) sobre o ruído branco (“white noise”), além da visualização das diferenças existentes entre formas distintas de onda (senoidal, dente-de-serra, entre outras).
+Trata-se da aquisiï¿½ï¿½o de conhecimento sobre os recursos da biblioteca para Python chamada Audiolazy. Foram realizados diversos exemplos de utilizaï¿½ï¿½o de comandos de plotagem de resposta em freqï¿½ï¿½ncia, aplicaï¿½ï¿½o de filtros como o passa-baixas (ï¿½lowpass ï¿½) e o ressonador (ï¿½resonatorï¿½) sobre o ruï¿½do branco (ï¿½white noiseï¿½), alï¿½m da visualizaï¿½ï¿½o das diferenï¿½as existentes entre formas distintas de onda (senoidal, dente-de-serra, entre outras).
 
-•	Estudo da Teoria de Processamento de Sinais
+ï¿½	Estudo da Teoria de Processamento de Sinais
 
-Consiste do estudo dos elementos relacionados à análise e à modificação de sinais com o intuito de torná-los apropriados para uma específica aplicação dos mesmos. No caso do projeto do sintetizador apresentado, é enfatizado um estudo sobre o processamento digital de sinais (DSP – Digital Signal Processing), no qual há a manipulação por técnicas matemáticas computacionais de dados apresentados em forma de sequências. A apresentação do conceito de Transformada Z e seu funcionamento na linguagem Python foi extremamente importante para a compreensão do que se trata, de fato, o processamento digital de sinais e sua utilidade para a elaboração do sintetizador.
+Consiste do estudo dos elementos relacionados ï¿½ anï¿½lise e ï¿½ modificaï¿½ï¿½o de sinais com o intuito de tornï¿½-los apropriados para uma especï¿½fica aplicaï¿½ï¿½o dos mesmos. No caso do projeto do sintetizador apresentado, ï¿½ enfatizado um estudo sobre o processamento digital de sinais (DSP ï¿½ Digital Signal Processing), no qual hï¿½ a manipulaï¿½ï¿½o por tï¿½cnicas matemï¿½ticas computacionais de dados apresentados em forma de sequï¿½ncias. A apresentaï¿½ï¿½o do conceito de Transformada Z e seu funcionamento na linguagem Python foi extremamente importante para a compreensï¿½o do que se trata, de fato, o processamento digital de sinais e sua utilidade para a elaboraï¿½ï¿½o do sintetizador.
 
-•	Estudo de Modelos de Síntese
+ï¿½	Estudo de Modelos de Sï¿½ntese
 
-Consiste no estudo do modelamento de síntese através de exemplos já existentes. Um exemplo em particular, associado à síntese do som de um trompete  (Horner & Beauchamp, 1995) é estudado mais a fundo.
+Consiste no estudo do modelamento de sï¿½ntese atravï¿½s de exemplos jï¿½ existentes. Um exemplo em particular, associado ï¿½ sï¿½ntese do som de um trompete  (Horner & Beauchamp, 1995) ï¿½ estudado mais a fundo.
 
-•	Realização de Gravações
+ï¿½	Realizaï¿½ï¿½o de Gravaï¿½ï¿½es
 
-Foram gravadas notas isoladas emitidas por um violão, em formato .wav, para servirem de base para o desenvolvimento do modelo de síntese do áudio captado.
+Foram gravadas notas isoladas emitidas por um violï¿½o, em formato .wav, para servirem de base para o desenvolvimento do modelo de sï¿½ntese do ï¿½udio captado.
 
-•	Análise de Gravações
+ï¿½	Anï¿½lise de Gravaï¿½ï¿½es
 
-Na análise das gravações, foram obtidas a resposta em frequência, o gráfico do decaimento da intensidade do som analisado e o filtro associado ao formato do corpo do violão (o qual está relacionado à interferência que o formato impõe sobre o som obtido). Essa etapa , ao ser finalizada, permite a reflexão sobre os resultados e o início da criação do modelo de síntese baseando-se nas conclusões adquiridas.
+Na anï¿½lise das gravaï¿½ï¿½es, foram obtidas a resposta em frequï¿½ncia, o grï¿½fico do decaimento da intensidade do som analisado e o filtro associado ao formato do corpo do violï¿½o (o qual estï¿½ relacionado ï¿½ interferï¿½ncia que o formato impï¿½e sobre o som obtido). Essa etapa , ao ser finalizada, permite a reflexï¿½o sobre os resultados e o inï¿½cio da criaï¿½ï¿½o do modelo de sï¿½ntese baseando-se nas conclusï¿½es adquiridas.
 
-•	Elaborar um modelo de síntese
+ï¿½	Elaborar um modelo de sï¿½ntese
 
-Etapa da criação do modelo de síntese a ser utilizado para obter o som semelhante ao do violão previamente gravado. Por meio de testes, há a obtenção das manipulações necessárias e que devem ser transformadas em código.
+Etapa da criaï¿½ï¿½o do modelo de sï¿½ntese a ser utilizado para obter o som semelhante ao do violï¿½o previamente gravado. Por meio de testes, hï¿½ a obtenï¿½ï¿½o das manipulaï¿½ï¿½es necessï¿½rias e que devem ser transformadas em cï¿½digo.
 
-•	Escrita de Código em Python
+ï¿½	Escrita de Cï¿½digo em Python
 
-Etapa na qual foi realizada, de fato, a criação de um programa que permitisse o uso do modelo de síntese criado para reproduzir os sons criados por meio do teclado MIDI. O código consiste no reconhecimento do componente MIDI conectado, a implementação do modelo de síntese e também a lógica de funcionamento de resposta a ser devolvida a cada tecla do componente ser pressionada com o auxílio da biblioteca Pygame.
+Etapa na qual foi realizada, de fato, a criaï¿½ï¿½o de um programa que permitisse o uso do modelo de sï¿½ntese criado para reproduzir os sons criados por meio do teclado MIDI. O cï¿½digo consiste no reconhecimento do componente MIDI conectado, a implementaï¿½ï¿½o do modelo de sï¿½ntese e tambï¿½m a lï¿½gica de funcionamento de resposta a ser devolvida a cada tecla do componente ser pressionada com o auxï¿½lio da biblioteca Pygame.
 
-•	Projeto e Implementação da Interface Gráfica
+ï¿½	Projeto e Implementaï¿½ï¿½o da Interface Grï¿½fica
 
-Etapa na qual desenvolvemos a interface gráfica, por meio de programação em Python. A ideia da interface era algo simples, que pudesse deixar o programa mais user-friendly  e mais interativo.
+Etapa na qual desenvolvemos a interface grï¿½fica, por meio de programaï¿½ï¿½o em Python. A ideia da interface era algo simples, que pudesse deixar o programa mais user-friendly  e mais interativo.
 
-•	Produção da documentação: relatórios e slides
+ï¿½	Produï¿½ï¿½o da documentaï¿½ï¿½o: relatï¿½rios e slides
 
-Todo o processo de desenvolvimento do projeto deveria, como notificado, ser documentado, podendo ser observados pontos de evolução no andamento, dificuldades na execução, possíveis falhas e o desempenho em geral do grupo ao estudar os assuntos necessários e aplicar o conhecimento adquirido. Portanto, essa etapa ocupa todas as semanas disponíveis do projeto como uma importante tarefa que em nenhum momento deveria deixar de ser feita para ser possível, ao final, analisar como foi o progresso na execução do sintetizador controlável. Por tratar-se de uma proposta envolvendo escrita de códigos em Python,foram armazenados arquivos .txt com históricos do Shell interativo IPython, no qual foram testados exemplos dados pelo orientador, além dos gráficos obtidos pela análise das gravações,o processo da criação do modelo de síntese, da escrita do código e por fim,os slides elaborados para as apresentações parciais e final no projeto.
+Todo o processo de desenvolvimento do projeto deveria, como notificado, ser documentado, podendo ser observados pontos de evoluï¿½ï¿½o no andamento, dificuldades na execuï¿½ï¿½o, possï¿½veis falhas e o desempenho em geral do grupo ao estudar os assuntos necessï¿½rios e aplicar o conhecimento adquirido. Portanto, essa etapa ocupa todas as semanas disponï¿½veis do projeto como uma importante tarefa que em nenhum momento deveria deixar de ser feita para ser possï¿½vel, ao final, analisar como foi o progresso na execuï¿½ï¿½o do sintetizador controlï¿½vel. Por tratar-se de uma proposta envolvendo escrita de cï¿½digos em Python,foram armazenados arquivos .txt com histï¿½ricos do Shell interativo IPython, no qual foram testados exemplos dados pelo orientador, alï¿½m dos grï¿½ficos obtidos pela anï¿½lise das gravaï¿½ï¿½es,o processo da criaï¿½ï¿½o do modelo de sï¿½ntese, da escrita do cï¿½digo e por fim,os slides elaborados para as apresentaï¿½ï¿½es parciais e final no projeto.
 
 
-2.2.Execução do cronograma
+2.2.Execuï¿½ï¿½o do cronograma
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-O cronograma inicialmente foi seguido conforme havia sido determinado. Entretanto, houve dificuldades na execução da etapa da criação do modelo de síntese. O grupo, ao finalizar a etapa da análise das gravações, conseguiu tirar conclusões sobre como o som sintetizado deveria ser, porém, não conseguiu rapidamente associar a um algoritmo que pudesse representar o processo de síntese necessário para atingir o resultado esperado.
-Sendo assim, foi necessário que o cronograma fosse alterado, resultando em um adiamento em uma semana da etapa de Projeto e Implementação de Interface Gráfica, como pode ser visto no cronograma atualizado:
+O cronograma inicialmente foi seguido conforme havia sido determinado. Entretanto, houve dificuldades na execuï¿½ï¿½o da etapa da criaï¿½ï¿½o do modelo de sï¿½ntese. O grupo, ao finalizar a etapa da anï¿½lise das gravaï¿½ï¿½es, conseguiu tirar conclusï¿½es sobre como o som sintetizado deveria ser, porï¿½m, nï¿½o conseguiu rapidamente associar a um algoritmo que pudesse representar o processo de sï¿½ntese necessï¿½rio para atingir o resultado esperado.
+Sendo assim, foi necessï¿½rio que o cronograma fosse alterado, resultando em um adiamento em uma semana da etapa de Projeto e Implementaï¿½ï¿½o de Interface Grï¿½fica, como pode ser visto no cronograma atualizado:
 
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
     | Etapa /Semana                | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
     +==============================+===+===+===+===+===+===+===+===+===+====+
-    | Familiarização com Python    | X | X | X | X | X | X |   |   |   |    |
+    | Familiarizaï¿½ï¿½o com Python    | X | X | X | X | X | X |   |   |   |    |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
-    | Familiarização com Audiolazy | X | X | X | X | X | X |   |   |   |    |
+    | Familiarizaï¿½ï¿½o com Audiolazy | X | X | X | X | X | X |   |   |   |    |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+ 
     | Estudo T. Processamento de S.| X | X | X | X | X | X |   |   |   |    |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
-    | Estudo de modelos de síntese | X | X | X | X | X | X |   |   |   |    |
+    | Estudo de modelos de sï¿½ntese | X | X | X | X | X | X |   |   |   |    |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
-    | Realização de Gravações      |   |   |   | X | X | X |   |   |   |    |
+    | Realizaï¿½ï¿½o de Gravaï¿½ï¿½es      |   |   |   | X | X | X |   |   |   |    |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
-    | Análise de Gravações         |   |   |   | X | X | X |   |   |   |    |
+    | Anï¿½lise de Gravaï¿½ï¿½es         |   |   |   | X | X | X |   |   |   |    |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
-    | Elaborar Modelo de Síntese   |   |   |   | X | X | X | X |   |   |    |
+    | Elaborar Modelo de Sï¿½ntese   |   |   |   | X | X | X | X |   |   |    |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
-    | Escrita de Código em Python  |   |   |   | X | X | X | X | X | X |    |      
+    | Escrita de Cï¿½digo em Python  |   |   |   | X | X | X | X | X | X |    |      
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
-    | Interface Gráfica            |   |   |   |   |   |   |   | X | X | X  |
+    | Interface Grï¿½fica            |   |   |   |   |   |   |   | X | X | X  |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
-    | Documentação                 | X | X | X | X | X | X | X | X | X | X  |
+    | Documentaï¿½ï¿½o                 | X | X | X | X | X | X | X | X | X | X  |
     +------------------------------+---+---+---+---+---+---+---+---+---+----+
  
 
 
 
-2.3.Divisão do trabalho
+2.3.Divisï¿½o do trabalho
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-A princípio, todas as tarefas seriam feitas em conjunto por todos os membros do grupo. Entretanto, por motivos de falta de disponibilidade de horários em comum além das reuniões semanais para a elaboração do projeto, houve claramente a necessidade de dividir as tarefas entre os membros para que o cronograma fosse cumprido conforme estabelecido anteriormente.
-As etapas de realização de gravações, análise de gravações, elaboração do modelo de síntese e escrita de código em Python e o implementação da interface gráfica foram feitas individualmente, sempre com o auxílio do orientador. Já as etapas de familiarização com Python e Audiolazy, estudo da teoria de processamento de sinais e de modelos de sínteses, e elaboração dos relatórios e documentação foram desenvolvidas em conjunto.
+A princï¿½pio, todas as tarefas seriam feitas em conjunto por todos os membros do grupo. Entretanto, por motivos de falta de disponibilidade de horï¿½rios em comum alï¿½m das reuniï¿½es semanais para a elaboraï¿½ï¿½o do projeto, houve claramente a necessidade de dividir as tarefas entre os membros para que o cronograma fosse cumprido conforme estabelecido anteriormente.
+As etapas de realizaï¿½ï¿½o de gravaï¿½ï¿½es, anï¿½lise de gravaï¿½ï¿½es, elaboraï¿½ï¿½o do modelo de sï¿½ntese e escrita de cï¿½digo em Python e o implementaï¿½ï¿½o da interface grï¿½fica foram feitas individualmente, sempre com o auxï¿½lio do orientador. Jï¿½ as etapas de familiarizaï¿½ï¿½o com Python e Audiolazy, estudo da teoria de processamento de sinais e de modelos de sï¿½nteses, e elaboraï¿½ï¿½o dos relatï¿½rios e documentaï¿½ï¿½o foram desenvolvidas em conjunto.
 
-Relação de tarefas feitas individualmente por cada membro do grupo:
+Relaï¿½ï¿½o de tarefas feitas individualmente por cada membro do grupo:
 
-•	Elisa Tengan Pires de Souza: análise das gravações, elaboração do modelo de síntese
+ï¿½	Elisa Tengan Pires de Souza: anï¿½lise das gravaï¿½ï¿½es, elaboraï¿½ï¿½o do modelo de sï¿½ntese
 
-•	Gabriela Souza de Melo: realização das gravações, análise das gravações
+ï¿½	Gabriela Souza de Melo: realizaï¿½ï¿½o das gravaï¿½ï¿½es, anï¿½lise das gravaï¿½ï¿½es
 
-•	José Henrique Camargo Leopoldo e Silva: elaboração do modelo de síntese, escrita de código em Python
+ï¿½	Josï¿½ Henrique Camargo Leopoldo e Silva: elaboraï¿½ï¿½o do modelo de sï¿½ntese, escrita de cï¿½digo em Python
 
-•	Rodolpho Yuiti Adamatsu : implementação da interface gráfica
+ï¿½	Rodolpho Yuiti Adamatsu : implementaï¿½ï¿½o da interface grï¿½fica
 
 
 
@@ -248,16 +247,14 @@ Relação de tarefas feitas individualmente por cada membro do grupo:
 3.Projeto
 ---------
 
-3.1.Especificação,  dimensionamentos, cálculos
+3.1.Especificaï¿½ï¿½o,  dimensionamentos, cï¿½lculos
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Para o desenvolvimento do software, foram estabelecidas as seguintes especificações:
+Para o desenvolvimento do software, foram estabelecidas as seguintes especificaï¿½ï¿½es:
 
-•	Linguagem: A linguagem utilizada (Python) foi escolhida pelo próprio orientador e já havia sido deixado claro que seria feito o uso da mesma no próprio nome apresentado do projeto na planilha de propostas de orientadores disponibilizada no início do segundo semestre desse ano.
+ï¿½	Linguagem: A linguagem utilizada (Python) foi escolhida pelo prï¿½prio orientador e jï¿½ havia sido deixado claro que seria feito o uso da mesma no prï¿½prio nome apresentado do projeto na planilha de propostas de orientadores disponibilizada no inï¿½cio do segundo semestre desse ano.
 
-•	Bibliotecas auxiliares: Inicialmente, era sabido que a biblioteca Audiolazy,criada pelo próprio orientador, seria a principal biblioteca auxiliar a ser utilizada. Suas ferramentas permitem uma análise de gravações e permitem também a elaboração da síntese do som desejado. Além da Audiolzay, foi necessário o uso da biblioteca Pygame para realizar a conexão do teclado MIDI e coordená-lo com o programa feito em Python.
-
-
+ï¿½	Bibliotecas auxiliares: Inicialmente, era sabido que a biblioteca Audiolazy,criada pelo prï¿½prio orientador, seria a principal biblioteca auxiliar a ser utilizada. Suas ferramentas permitem uma anï¿½lise de gravaï¿½ï¿½es e permitem tambï¿½m a elaboraï¿½ï¿½o da sï¿½ntese do som desejado. Alï¿½m da Audiolzay, foi necessï¿½rio o uso da biblioteca Pygame para realizar a conexï¿½o do teclado MIDI e coordenï¿½-lo com o programa feito em Python.
 
 
 
@@ -270,32 +267,40 @@ Para o desenvolvimento do software, foram estabelecidas as seguintes especificaç
 
 
 
-3.2.Materiais e orçamento
+
+
+3.2.Materiais e orï¿½amento
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Os materiais necessários para o projeto estão listados abaixo com seus respectivos preços. É importante notificar que os integrantes do grupo já possuíam todos os itens necessários, resultando em um custo zero para a execução do projeto.
+Os materiais necessï¿½rios para o projeto estï¿½o listados abaixo com seus respectivos preï¿½os. ï¿½ importante notificar que os integrantes do grupo jï¿½ possuï¿½am todos os itens necessï¿½rios, resultando em um custo zero para a execuï¿½ï¿½o do projeto.
 
-Item necessário	Preço
+Item necessï¿½rio	Preï¿½o
 
 Teclado musical com entrada MIDI	        R$ 700
 
 Cabo MIDI-USB	                                R$ 130
 
-Caixas de som para demonstração do programa	R$ 200
+Caixas de som para demonstraï¿½ï¿½o do programa	R$ 200
 
 Computador (Laptop)	                        R$ 1.800
 
 
 
 
-3.3.Execução
+3.3.Execuï¿½ï¿½o
 ^^^^^^^^^^^^
 
-Para poder realizar o projeto, primeiramente foi necessário obter um embasamento teórico a respeito de filtros, Transformada Z e sinal. Isso foi realizado com a ajuda do Prof. Orientador em reuniões semanais. Simultaneamente também foi realizado um primeiro contato com a linguagem de programação Python, por meio de sites como codeacademy.com e stackoverflow.com, além de haver auxílio também nessas reuniões.
-O próximo passo foi a escolha de um som a ser sintetizado, no caso, foi escolhido o som do violão. O som de várias notas foi gravado para que, por meio da biblioteca Audiolazy e outras ferramentas do Python, essas notas puderam ser analisadas. Feito isso, uma vez que apesar das diferentes frequências, todas elas seguem um formato semelhante, foi possível chegar a um filtro bastante próximo ao som do violão. Tal filtro foi obtido por meio de ferramentas matemáticas do Python e do Audiolazy, e o grupo optou por utilizar o modelo de síntese aditivo pela simples implementação.
-Tendo o filtro iniciou-se o processo de escrita do código do sintetizador em si. Primeiramente, o código foi organizado de modo que recebendo  um número de 1 a 13 como entrada, que eram associadas a uma frequência/nota cada, o algoritmo a partir de um ruído branco qualquer, moldá-o com a frequência escolhida e aplica o filtro, devolvendo um som como saída do programa, de modo que esse som, após passar pelo filtro assemelha-se ao som da nota escolhida tocada em um violão.
-Visto que uma das propostas do projeto era utilizar um teclado MIDI como entrada para o programa, o desenvolvimento do algoritmo passou então a focar-se na interface controlador/código. Para isso foi utilizada a biblioteca Pygame, pela praticidade e alta compatibilidade com diversos controladores, de joysticks a interfaces MIDI. Na parte inicial, muito foi feito utilizando um controle de XBOX, até que foi possível apertar um botão, atribuir uma frequência/nota específica para ele e tocá-la. Após isso, foi relativamente simples a substituição pelo teclado MIDI, onde apenas algumas funções da biblioteca tiveram de ser trocadas.
-A parte final do projeto é a Interface Gráfica (GUI). 
+
+Para poder realizar o projeto, primeiramente foi necessÃ¡rio obter um embasamento teÃ³rico a respeito de filtros, Transformada Z e sinal. Isso foi realizado com a ajuda do Prof. Orientador em reuniÃµes semanais. Simultaneamente tambÃ©m foi realizado um primeiro contato com a linguagem de programaÃ§Ã£o Python, por meio de sites como codeacademy.com e stackoverflow.com, alÃ©m de haver auxÃ­lio tambÃ©m nessas reuniÃµes.
+
+O prÃ³ximo passo foi a escolha de um som a ser sintetizado, no caso, foi escolhido o som do violÃ£o. O som de vÃ¡rias notas foi gravado para que, por meio da biblioteca Audiolazy e outras ferramentas do Python, essas notas puderam ser analisadas. Feito isso, uma vez que apesar das diferentes frequÃªncias, todas elas seguem um formato semelhante, foi possÃ­vel chegar a um filtro bastante prÃ³ximo ao som do violÃ£o. Tal filtro foi obtido por meio de ferramentas matemÃ¡ticas do Python e do Audiolazy, e o grupo optou por utilizar o modelo de sÃ­ntese aditivo pela simples implementaÃ§Ã£o.
+Tendo o filtro iniciou-se o processo de escrita do cÃ³digo do sintetizador em si.
+
+
+Primeiramente, o cÃ³digo foi organizado de modo que recebendo um nÃºmero de 1 a 13 como entrada, que eram associadas a uma frequÃªncia/nota cada, o algoritmo a partir de um ruÃ­do branco qualquer, moldÃ¡-o com a frequÃªncia escolhida e aplica o filtro, devolvendo um som como saÃ­da do programa, de modo que esse som, apÃ³s passar pelo filtro assemelha-se ao som da nota escolhida tocada em um violÃ£o.
+Visto que uma das propostas do projeto era utilizar um teclado MIDI como entrada para o programa, o desenvolvimento do algoritmo passou entÃ£o a focar-se na interface controlador/cÃ³digo. Para isso foi utilizada a biblioteca Pygame, pela praticidade e alta compatibilidade com diversos controladores, de joysticks a interfaces MIDI. Na parte inicial, muito foi feito utilizando um controle de XBOX, atÃ© que foi possÃ­vel apertar um botÃ£o, atribuir uma frequÃªncia/nota especÃ­fica para ele e tocÃ¡-la. ApÃ³s isso, foi relativamente simples a substituiÃ§Ã£o pelo teclado MIDI, onde apenas algumas funÃ§Ãµes da biblioteca tiveram de ser trocadas.
+
+A parte final do projeto Ã© a Interface GrÃ¡fica (GUI).
 
 
 
@@ -309,36 +314,36 @@ A parte final do projeto é a Interface Gráfica (GUI).
 4.Testes
 --------
 
-Para o teste final do projeto,foi conectado,de fato, o teclado MIDI ao computador e assim como foi feito previamente com o controle de Xbox, o programa foi testado para observarmos se as funções que controlavam a conexão MIDI estavam de acordo.
-Com relação ao resultado final do projeto, é possível afirmar que o mesmo não foi completamente bem sucedido. Para a apresentação final, o código feito funcionava, as conexões do teclado MIDI foram feitas e ao acionar uma tecla do instrumento, o som sintetizado era tocado. Entretanto, quando as teclas eram acionadas seguidamente em um curto intervalo de tempo, o som obtido não era tocado como esperado. Havia algum tipo de interferência , causada pelo fato de a síntese de notas seguidas em tempo real exigir um processador consideravelmente potente . 
-Outro problema foi a interface gráfica criada, a qual não foi feita de forma interativa e portanto,não era influenciada pelas ações do usuário ao tocar o teclado. 
+Para o teste final do projeto,foi conectado,de fato, o teclado MIDI ao computador e assim como foi feito previamente com o controle de Xbox, o programa foi testado para observarmos se as funï¿½ï¿½es que controlavam a conexï¿½o MIDI estavam de acordo.
+Com relaï¿½ï¿½o ao resultado final do projeto, ï¿½ possï¿½vel afirmar que o mesmo nï¿½o foi completamente bem sucedido. Para a apresentaï¿½ï¿½o final, o cï¿½digo feito funcionava, as conexï¿½es do teclado MIDI foram feitas e ao acionar uma tecla do instrumento, o som sintetizado era tocado. Entretanto, quando as teclas eram acionadas seguidamente em um curto intervalo de tempo, o som obtido nï¿½o era tocado como esperado. Havia algum tipo de interferï¿½ncia , causada pelo fato de a sï¿½ntese de notas seguidas em tempo real exigir um processador consideravelmente potente . 
+Outro problema foi a interface grï¿½fica criada, a qual nï¿½o foi feita de forma interativa e portanto,nï¿½o era influenciada pelas aï¿½ï¿½es do usuï¿½rio ao tocar o teclado. 
 
-O modelo de síntese atingido não se baseou no algoritmo dado no modelo do trompete de síntese aditiva que inicialmente era para servir de referência, apesar de um modelo simples desse tipo de síntese ter sido iniciado, e foi utilizada uma técnica de síntese subtrativa com o filtro obtido através da análise LPC aplicado. Esse problema se gerou tanto por motivos de talvez um entendimento falho do artigo no qual o modelo se encontrava, quanto por um gerenciamento de tempo para realização do projeto por parte do próprio grupo desfavorável. Além disso, se o modelo de síntese aditiva tivesse sido implementado, o problema da interferência dos sons causados pela velocidade necessária de processamento de notas seguidos seria reduzido. Por fim, pode-se dizer que o som sintetizado obtido e apresentado deixou a desejar.
+O modelo de sï¿½ntese atingido nï¿½o se baseou no algoritmo dado no modelo do trompete de sï¿½ntese aditiva que inicialmente era para servir de referï¿½ncia, apesar de um modelo simples desse tipo de sï¿½ntese ter sido iniciado, e foi utilizada uma tï¿½cnica de sï¿½ntese subtrativa com o filtro obtido atravï¿½s da anï¿½lise LPC aplicado. Esse problema se gerou tanto por motivos de talvez um entendimento falho do artigo no qual o modelo se encontrava, quanto por um gerenciamento de tempo para realizaï¿½ï¿½o do projeto por parte do prï¿½prio grupo desfavorï¿½vel. Alï¿½m disso, se o modelo de sï¿½ntese aditiva tivesse sido implementado, o problema da interferï¿½ncia dos sons causados pela velocidade necessï¿½ria de processamento de notas seguidos seria reduzido. Por fim, pode-se dizer que o som sintetizado obtido e apresentado deixou a desejar.
 
-Com relação ao código do programa em si, foi observado que sua finalização deveria ter sido mais levada em conta. Havia muitos elementos que necessitavam de um comentário, mas não o possuíam. O código deveria estar mais organizado e com algumas alterações que o tornassem mais “limpo” e que providenciasse um melhor entendimento.
+Com relaï¿½ï¿½o ao cï¿½digo do programa em si, foi observado que sua finalizaï¿½ï¿½o deveria ter sido mais levada em conta. Havia muitos elementos que necessitavam de um comentï¿½rio, mas nï¿½o o possuï¿½am. O cï¿½digo deveria estar mais organizado e com algumas alteraï¿½ï¿½es que o tornassem mais ï¿½limpoï¿½ e que providenciasse um melhor entendimento.
 
-5.Resultados, comentários e conclusões
+5.Resultados, comentï¿½rios e conclusï¿½es
 --------------------------------------
 
-Avaliação dos resultados:
+Avaliaï¿½ï¿½o dos resultados:
 
-O projeto em sua forma final, apesar de ter cumprido a meta inicial de sintetizar o som de um instrumento musical real e implementá-lo em um programa no qual o teclado MIDI era o meio de fazer uso do som obtido ficou abaixo das expectativas, visto que alguns pontos do código e do modelo de síntese em si poderiam ter sido alterados  de forma a otimizar o funcionamento como um todo.
+O projeto em sua forma final, apesar de ter cumprido a meta inicial de sintetizar o som de um instrumento musical real e implementï¿½-lo em um programa no qual o teclado MIDI era o meio de fazer uso do som obtido ficou abaixo das expectativas, visto que alguns pontos do cï¿½digo e do modelo de sï¿½ntese em si poderiam ter sido alterados  de forma a otimizar o funcionamento como um todo.
 
 Falhas:
 
-Houve falhas na implementação da interface gráfica, a qual não era interativa com o programa. Por conta da velocidade de processamento em tempo real,houve falhas também na execução de notas seguidas ao serem acionadas as teclas do teclado MIDI, resultando em uma interferência de sons.
+Houve falhas na implementaï¿½ï¿½o da interface grï¿½fica, a qual nï¿½o era interativa com o programa. Por conta da velocidade de processamento em tempo real,houve falhas tambï¿½m na execuï¿½ï¿½o de notas seguidas ao serem acionadas as teclas do teclado MIDI, resultando em uma interferï¿½ncia de sons.
 
 Dificuldades:
 
-Com relação às dificuldades encontradas para a realização do projeto, pode-se citar primeiramente a pouca ou nenhuma familiaridade dos integrantes do grupo com a própria linguagem utilizada para criar o programa, o Python.Outro obstáculo encontrado foi a dificuldade em entender os conceitos de análise e processamento de sinais. Desde o início das reuniões realizadas, o orientador apresentou a parte teórica necessária para o desenvolvimento do sintetizador. Entretanto, todo o conteúdo em si foi bastante denso e levou várias semanas extras para ser compreendido. O projeto somente começou a apresentar progresso após os integrantes do grupo terem conseguido associar tudo o que foi apresentado em teoria com o objetivo de sintetizar um som.
+Com relaï¿½ï¿½o ï¿½s dificuldades encontradas para a realizaï¿½ï¿½o do projeto, pode-se citar primeiramente a pouca ou nenhuma familiaridade dos integrantes do grupo com a prï¿½pria linguagem utilizada para criar o programa, o Python.Outro obstï¿½culo encontrado foi a dificuldade em entender os conceitos de anï¿½lise e processamento de sinais. Desde o inï¿½cio das reuniï¿½es realizadas, o orientador apresentou a parte teï¿½rica necessï¿½ria para o desenvolvimento do sintetizador. Entretanto, todo o conteï¿½do em si foi bastante denso e levou vï¿½rias semanas extras para ser compreendido. O projeto somente comeï¿½ou a apresentar progresso apï¿½s os integrantes do grupo terem conseguido associar tudo o que foi apresentado em teoria com o objetivo de sintetizar um som.
 
-Sugestões:
+Sugestï¿½es:
 
-Para possíveis melhorias no projeto, seria interessante fazer com que a interface gráfica interagisse com as ações do programa criado. Um novo modelo de síntese, dessa vez do tipo aditiva, seria favorável para reduzir o problema da interferência de sons.
+Para possï¿½veis melhorias no projeto, seria interessante fazer com que a interface grï¿½fica interagisse com as aï¿½ï¿½es do programa criado. Um novo modelo de sï¿½ntese, dessa vez do tipo aditiva, seria favorï¿½vel para reduzir o problema da interferï¿½ncia de sons.
 
 Agradecimentos:
 
-Gostaríamos de agradecer nosso orientador Danilo, por toda a ajuda e suporte durante o semestre para a realização do projeto.
+Gostarï¿½amos de agradecer nosso orientador Danilo, por toda a ajuda e suporte durante o semestre para a realizaï¿½ï¿½o do projeto.
 
 
 
@@ -350,8 +355,8 @@ Gostaríamos de agradecer nosso orientador Danilo, por toda a ajuda e suporte dur
 Indique os itens de bibliografia citados ou que auxiliaram seus estudos para o projeto, usando o estilo:
 
 Livros:
-Oppenheim, Alan V.; Schafer, Ronald W., Buck, John R. - Discrete Time Signal Processing – Prentice Hall – Segunda Edição - 1998
+Oppenheim, Alan V.; Schafer, Ronald W., Buck, John R. - Discrete Time Signal Processing ï¿½ Prentice Hall ï¿½ Segunda Ediï¿½ï¿½o - 1998
 
 Artigos:
-Horner,Andrew ;Beauchamp,James – Synthesis of Trumpet TonesUsing a Wavetable
-and a Dynamic Filter – Journal of Audio Engineering Society – vol 43/n.10 – páginas 799-812 – Editora – 1995
+Horner,Andrew ;Beauchamp,James ï¿½ Synthesis of Trumpet TonesUsing a Wavetable
+and a Dynamic Filter ï¿½ Journal of Audio Engineering Society ï¿½ vol 43/n.10 ï¿½ pï¿½ginas 799-812 ï¿½ Editora ï¿½ 1995
