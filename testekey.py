@@ -330,7 +330,7 @@ class Ui_MainWindow(object):
         self.actionClose.setText(_translate("MainWindow", "Close", None))
 
 from PyQt4 import Qwt5
-import res_rc
+#import res_rc
 
 if __name__ == "__main__":
     import sys
@@ -388,20 +388,21 @@ def main():
 #               que 1,5 segundo é tempo suficiente para se ouvir o som, consi-
 #               derando o decaimento e ajuda em aliviar a quantidade de dados
 #               que serão processados.
-                smix.limit(.4 * s)
+                smix.limit(1.5 * s)
                 
 #               Filtro simplificado que 'cria' um som próximo ao do violão.
-                filt = 0.01/(1 - 1.46146 * z**-1 + 0.875285 * z**-2 - 0.990911
-                * z**-3 + 0.600283 * z**-4 - 0.021322 * z**-5)
+#                filt = 0.01/(1 - 1.46146 * z**-1 + 0.875285 * z**-2 - 0.990911
+#                * z**-3 + 0.600283 * z**-4 - 0.021322 * z**-5)
             
 #               Filtro obtido por meio da análise lpc (Linear predictive 
 #               coding) de uma gravação do som de um violão no formato wav.
-#               filt = 0.01/(1 - 1.24148 * z**-1 + 0.056845 * z**-2 + 
-#               0.0437731 * z**-3 + 0.0337219 * z**-4 + 0.0259962 * z**-5 + 
-#               0.0200621 * z**-6 + 0.0155093 * z**-7 + 0.0120234 * z**-8 + 
-#               0.00936348 * z**-9 + 0.0073461 * z**-10 + 0.00583213 * z**-
-#               11 + 0.00471728 * z**-12 + 0.00392492 * z**-13 + 0.00340072 
-#               * z**-14 + 0.00310888 * z**-15 - 0.00275325 * z** -16)                
+                filt = 0.01/(1 - 1.24148 * z**-1 + 0.056845 * z**-2 + 
+                0.0437731 * z**-3 + 0.0337219 * z**-4 + 0.0259962 * z**-5 + 
+                0.0200621 * z**-6 + 0.0155093 * z**-7 + 0.0120234 * z**-8 + 
+                0.00936348 * z**-9 + 0.0073461 * z**-10 + 0.00583213 * z**-
+                11 + 0.00471728 * z**-12 + 0.00392492 * z**-13 + 0.00340072 
+                * z**-14 + 0.00310888 * z**-15 - 0.00275325 * z** -16)
+                
                 player.play(filt(smix),rate = rate)
 
 #----------------------------/Sintetizador----------------------------
