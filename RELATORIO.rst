@@ -371,3 +371,10 @@ https://github.com/kushalbhabra/pyMidi/blob/master/src/test.py -  kushalbhabra /
 http://www.pygame.org/docs/ref/midi.html  - Pygame . midi ----Pygame v1.9.2 documentation (Documentação sobre midi para Pygame)
 
 https://github.com/danilobellini/audiolazy  - Github/Danilo de Jesus da Silva Bellini -  Repositório Audiolazy (Expressive Digital Signal Processing (DSP) package for Python)
+ 
+http://www.acoustics.salford.ac.uk/acoustics_info/sound_synthesis/ - Principles of Sound Synthesis – University of Salford, Manchester
+
+http://www.ee.columbia.edu/~ronw/dsp/ - Synthesizing a Guitar Using Physical Modeling Techniques – Steven Sanders; Ron Weiss (Columbia University)
+
+http://www.youtube.com/watch?v=-BcQ3R8QOvU – Vídeo :“ANÁLISE LINEAR E NÃO-LINEAR DE VIBRAÇÃO LIVRE EM CORDAS PARA VIOLÃO”
+
