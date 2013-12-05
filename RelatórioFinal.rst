@@ -408,6 +408,7 @@ and a Dynamic Filter – Journal of Audio Engineering Society – vol 43/n.10 �
 Páginas da Web:
 
 
+
 http://nyrpnz.blogspot.com.br/2012/03/sdl-event-echoer.html - SDL Event Echoer (Código de exemplo para testes de eventos com uso de controle de Xbox)
 
 https://github.com/kushalbhabra/pyMidi/blob/master/src/test.py -  kushalbhabra / pyMidi  (Exemplo de teste de eventos com uso de teclado MIDI)
@@ -421,4 +422,8 @@ http://www.acoustics.salford.ac.uk/acoustics_info/sound_synthesis/ - Principles 
 http://www.ee.columbia.edu/~ronw/dsp/ - Synthesizing a Guitar Using Physical Modeling Techniques – Steven Sanders; Ron Weiss (Columbia University)
 
 http://www.youtube.com/watch?v=-BcQ3R8QOvU – Vídeo :“ANÁLISE LINEAR E NÃO-LINEAR DE VIBRAÇÃO LIVRE EM CORDAS PARA VIOLÃO”
+
+http://pyqt.sourceforge.net/Docs/PyQt4/
+
+http://qt-project.org/doc/qt-4.8/designer-manual.html
 
