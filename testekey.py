@@ -388,7 +388,7 @@ def main():
 #               que 1,5 segundo é tempo suficiente para se ouvir o som, consi-
 #               derando o decaimento e ajuda em aliviar a quantidade de dados
 #               que serão processados.
-                smix.limit(1.5 * s)
+                smix.limit(.4 * s)
                 
 #               Filtro simplificado que 'cria' um som próximo ao do violão.
                 filt = 0.01/(1 - 1.46146 * z**-1 + 0.875285 * z**-2 - 0.990911
