@@ -342,11 +342,11 @@ Um exemplo de adição de objetos
 
 Após a adição de todos elementos essenciais, a interface deve ter esta aparência:
 
-[imagem]
+.. image:: http://img834.imageshack.us/img834/6900/coo0.png
 
 
 Uma questão bastante comentada pelo nosso orientador é que o tamanho da janela não altera as proporções dos objetos.
-Isso ocorreu em nosso projeto, devido à estrutura do código na biblioteca Qt. O teclado, possui as teclas pretas, que estão dispostas de maneira assimétrica. Isso impossibilita que elas sejam agrupadas em um layout object, 
+Isso ocorreu em nosso projeto, devido à estrutura do código na biblioteca Qt. O teclado possui as teclas pretas, que estão dispostas de maneira assimétrica. Isso impossibilita que elas sejam agrupadas em um layout object, 
 pois assim elas seriam automaticamente reposicionadas de maneira simétrica, com distâncias fixas entre sí. Portanto, optamos por deixar o tamanho da janela fixo.
 
 
