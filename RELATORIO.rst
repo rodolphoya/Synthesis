@@ -363,9 +363,10 @@ and a Dynamic Filter – Journal of Audio Engineering Society – vol 43/n.10 �
 
 Páginas da Web:
 
-http://www.youtube.com/watch?v=jhNow4cUMV8  - Vídeo : Pygame-Midi input test
 
 http://nyrpnz.blogspot.com.br/2012/03/sdl-event-echoer.html - SDL Event Echoer (Código de exemplo para testes de eventos com uso de controle de Xbox)
+
+https://github.com/kushalbhabra/pyMidi/blob/master/src/test.py -  kushalbhabra / pyMidi  (Exemplo de teste de eventos com uso de teclado MIDI)
 
 http://www.pygame.org/docs/ref/midi.html  - Pygame . midi ----Pygame v1.9.2 documentation (Documentação sobre midi para Pygame)
 
