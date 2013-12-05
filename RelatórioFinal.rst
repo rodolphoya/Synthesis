@@ -289,6 +289,9 @@ Computador (Laptop)	                        R$ 1.800
 3.3.Execução
 ^^^^^^^^^^^^
 
+3.3.1 Síntese de Áudio
+~~~~~~~~~~~~~~~~~~~~~~
+
 Para poder realizar o projeto, primeiramente foi necessário obter um embasamento teórico a respeito de filtros, Transformada Z e sinal. Isso foi realizado com a ajuda do Prof. Orientador em reuniões semanais. Simultaneamente também foi realizado um primeiro contato com a linguagem de programação Python, por meio de sites como codeacademy.com e stackoverflow.com, além de haver auxílio também nessas reuniões.
 
 O próximo passo foi a escolha de um som a ser sintetizado, no caso, foi escolhido o som do violão. O som de várias notas foi gravado para que, por meio da biblioteca Audiolazy e outras ferramentas do Python, essas notas puderam ser analisadas. Feito isso, uma vez que apesar das diferentes frequências, todas elas seguem um formato semelhante, foi possível chegar a um filtro bastante próximo ao som do violão. Tal filtro foi obtido por meio de ferramentas matemáticas do Python e do Audiolazy, e o grupo optou por utilizar o modelo de síntese aditivo pela simples implementação.
@@ -301,9 +304,50 @@ A parte final do projeto é a Interface Gráfica (GUI).
 
 
 
+3.3.2 Implementação da Inteface Gráfica
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+A GUI, do inglês Graphical User Interface, foi desenvolvida através da biblioteca Qt do Python. O grande objetivo desta interface é fazer com que a síntese de áudio seja feita em um ambiente amigável ao usuário.
+Em um primeiro momento, usamos o Qt Designer que é uma API (Application Programming Interface). O desenvolvimento do código, usando esta API, se dá através de uma plataforma WYSIWYG (acrônimo da expressão em inglês "What You See Is What You Get"), ou seja, você arrasta e posiciona os elementos gráficos da interface e a API gera o código automaticamente.
 
+A nossa proposta inicial era desenhar um teclado virtual, o qual interagiria com o usuário, de acordo com as notas tocadas no teclado físico. Além disso, o usuário também teria acesso a controles do nível de volume de som e visualização das frequências/notas tocadas.
+
+Usando o Qt Designer, foi possível criar uma interface que possuía todos os elementos gráficos para executar as funções propostas. No entanto, encontramos um grande problema devido à geração automática do código, por parte do Designer, pois este código era de difícil compreensão. Assim, a segunda etapa, que é a da associação dos elementos gráficos à funções do programa de síntese, ficou prejudicada.
+Com isso, partimos para um estudo mais aprofundado da biblioteca Qt e começamos a montar manualmente o código da GUI.
+
+Diferente do desenvolvimento no Qt Designer, onde posicionar os elementos gráficos era uma tarefa um tanto quanto simples, através do "drag and drop", escrever o código manualmente requiriu maior conhecimento de funções da biblioteca Qt. 
+Essas funções definem a posição, o tamanho, o tipo e a relação entre objetos da interface.
+
+Um exemplo de adição de objetos
+
+.. code-block:: python
+
+ import sys
+ from PyQt4 import QtGui, QtCore
+  
+ app = QtGui.QApplication(sys.argv)
+  
+ #Janela Principal 
+ win = QtGui.QMainWindow()
+ 
+ #Adiciona um visor LCD na main window "win"
+ lcd = QtGui.QLCDNumber(win)
+ #define posição(x,y) e tamanho(largura, altura)
+ lcd.setGeometry(25,25,100,50)
+ 
+ win.show()
+ sys.exit(app.exec_())
+
+
+Após a adição de todos elementos essenciais, a interface deve ter esta aparência:
+
+[imagem]
+
+
+Uma questão bastante comentada pelo nosso orientador é que o tamanho da janela não altera as proporções dos objetos.
+Isso ocorreu em nosso projeto, devido à estrutura do código na biblioteca Qt. O teclado, possui as teclas pretas, que estão dispostas de maneira assimétrica. Isso impossibilita que elas sejam agrupadas em um layout object, 
+pois assim elas seriam automaticamente reposicionadas de maneira simétrica, com distâncias fixas entre sí. Portanto, optamos por deixar o tamanho da janela fixo.
 
 
 
