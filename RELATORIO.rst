@@ -1,4 +1,3 @@
-
 *************************************************************************************
 Sintetizador controlável com a biblioteca AudioLazy (DSP em tempo real para o Python)
 *************************************************************************************
@@ -354,13 +353,16 @@ Gostaríamos de agradecer nosso orientador Danilo, por toda a ajuda e suporte du
 
 
 Livros:
+
 Oppenheim, Alan V.; Schafer, Ronald W., Buck, John R. - Discrete Time Signal Processing – Prentice Hall – Segunda Edição - 1998
 
 Artigos:
+
 Horner,Andrew ;Beauchamp,James – Synthesis of Trumpet TonesUsing a Wavetable
 and a Dynamic Filter – Journal of Audio Engineering Society – vol 43/n.10 – páginas 799-812 – Editora – 1995
 
 Páginas da Web:
+
 http://www.youtube.com/watch?v=jhNow4cUMV8  - Vídeo : Pygame-Midi input test
 
 http://nyrpnz.blogspot.com.br/2012/03/sdl-event-echoer.html - SDL Event Echoer (Código de exemplo para testes de eventos com uso de controle de Xbox)
