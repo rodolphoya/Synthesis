@@ -32,7 +32,7 @@ Resumo
 O projeto a ser apresentado consiste na elaboração de um sintetizador de áudio por meio de programação fazendo-se uso da linguagem Python. Neste sintetizador de áudio, o objetivo é de simular o som de um violão acústico, fazendo com que o usuário final possa controlá-lo de maneira intuitiva, através de um teclado musical acoplado ao computador.
 
 Para a criação deste sintetizador, é imprescindível que se tenha conhecimento de conceitos relacionados à análise, processamento e síntese de sinais. Desse modo, a etapa inicial do projeto consistiu no estudo destes elementos apresentados. 
-O sintetizador baseia-se em um modelo de síntese de Karplus-Strong[#] no qual um algoritmo é aplicado e diversos controles de variáveis de um sinal são realizados para se obter o som similar ao de um violão desejado. Assim que é decidido como deve ser feita a síntese de áudio, é necessário realiza-la em forma de código. A linguagem utilizada foi o Python, a qual apresenta várias ferramentas úteis ao projeto, além de ser fácil de ser compreendida em geral. Não obstante, foram utilizadas algumas bibliotecas do Python que auxiliaram a elaboração do projeto, executando funções distintas. 
+O sintetizador baseia-se em um modelo de síntese de Karplus-Strong[#]_ no qual um algoritmo é aplicado e diversos controles de variáveis de um sinal são realizados para se obter o som similar ao de um violão desejado. Assim que é decidido como deve ser feita a síntese de áudio, é necessário realiza-la em forma de código. A linguagem utilizada foi o Python, a qual apresenta várias ferramentas úteis ao projeto, além de ser fácil de ser compreendida em geral. Não obstante, foram utilizadas algumas bibliotecas do Python que auxiliaram a elaboração do projeto, executando funções distintas. 
 
 A AudioLazy (criada pelo orientador do projeto) é a base de todo o sintetizador. Através desta biblioteca foi possível fazer a manipulação e reprodução dos sinais de áudio. Já a Matplotlib é uma ferramenta que auxilia na visualização do sinal gerado, através da criação de gráficos, baseados nos modelos matemáticos de síntese. Por ultimo, temos a biblioteca PyQt, utilizada no desenvolvimento da interface gráfica.
 
@@ -383,7 +383,7 @@ Gostaríamos de agradecer nosso orientador Danilo, por toda a ajuda e suporte du
 6.Notas
 -------
 
-[1] O Modelo de síntese Karplus-Strong é um algoritmo que pega um pequeno sinal de onda e aplica um filtro delay para simular o som de uma corda de instrumento musical ou mesmo alguns tipos de instrumentos de percurssão. Este método, também pode ser visto com um modelo de síntese subtrativa, similar a um filtro combinatório que use a transformada Z
+[#] O Modelo de síntese Karplus-Strong é um algoritmo que pega um pequeno sinal de onda e aplica um filtro delay para simular o som de uma corda de instrumento musical ou mesmo alguns tipos de instrumentos de percurssão. Este método, também pode ser visto com um modelo de síntese subtrativa, similar a um filtro combinatório que use a transformada Z
 
 
 
