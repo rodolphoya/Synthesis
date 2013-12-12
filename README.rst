@@ -53,9 +53,31 @@ Conteúdo
 ^^^^^^^^^^^^^
 
 
-Um sintetizador de áudio consiste em um instrumento eletrônico que gera e processa diferentes sons. Nesse projeto, o objetivo é criar tal instrumento por meio de programação e implementá-lo em uma interface básica para ter seu funcionamento em tempo real.
+Um sintetizador de áudio consiste em um equipamento eletrônico que, normalmente, gera e processa diferentes sons. No contexto deste projeto, o objetivo era criar um software capaz de realizar a função de um sintetizador e que estivesse inserido em uma interface que possibilite o controle, em tempo real, pelo usuário.
 
-Sendo assim, primeiramente, deve-se pensar em como ocorre o processo de sintetização de áudio para depois poder descrevê-lo em forma de código. Para isso,é necessário que haja o conhecimento de diversos conceitos relacionados à análise, processamento e síntese de sinais. A análise e o processamento consistiram no ato de observar e coletar informações importantes que permitam uma manipulação posterior do sinal em questão para cumprir o objetivo designado.
+Entender como o processo de síntese de áudio funciona foi essencial, ao mesmo tempo em que a familiarização com a programação em Python permitiu a realização de testes, nos quais a teoria da síntese pôde ser aplicada conforme foi sendo assimilada pelo grupo.
+
+1.1.1.Modelo de Síntese empregado, o algoritmo de Karplus-Strong
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+O algorítmo de Karplus-Strong (nome dado em razão aos seus criadores Kevin Karplus e Alex Strong) é uma maneira bastante efetiva de simular o som de cordas, como o de violões acústicos, guitarras elétricas, banjos e até mesmo alguns instrumentos de percurssão.
+
+Para entender o algorítmo, primeiro precisamos entender os fenômenos físicos que ocorrem quando a corda de um instrumento musical, como a de um violão, é tocada: Em um primeiro momento, a corda tocada está altamente energizada, vibrando com bastante intensidade, criando uma onda sonora rica em harmônicos, a qual tem a sua frequência fundamental determinada pela massa e pela tensão da corda. Devido à efeitos dissipativos, como o atrito da corda com o ar, a vibração perde intensidade, fazendo com que a corda vibre menos. A onda sonora, que antes era bastante rica em harmônicos, agora tende a vibrar em um tom "mais puro", sem tantos harmônicos. Por fim, a energia inicial da corda se esvai e então ela para de vibrar.
+
+No algorítmo, primeiro gera-se um buffer cheio de números aleatórios, que podem ser interpretados como ruído. (Um buffer é um espaço, na memória RAM de um computador, onde podemos armazenar uma série de números). Analogamente ao que ocorre em uma corda de violão, esse buffer preenchido com números aleatórios representa a energia inicial da corda. O algorítmo impõe uma rotina que extraia os harmônicos até chegar no tom "puro" desejado.
+
+O modelo matemático de Karplus-Strong é definido por
+
+.. image:: 
+
+	
+
+
+
+
+
+
+//Sendo assim, primeiramente, deve-se pensar em como ocorre o processo de síntese de áudio para depois poder descrevê-lo em forma de código. Para isso,é necessário que haja o conhecimento de diversos conceitos relacionados à análise, processamento e síntese de sinais. A análise e o processamento consistiram no ato de observar e coletar informações importantes que permitam uma manipulação posterior do sinal em questão para cumprir o objetivo designado.
 
 Já a síntese de sinais trata-se do ato de fabricar o sinal desejado, com as características antes analisadas por meio de manipulação matemática utilizando python, de forma a obtermos a equação do filtro que o corpo do violão produz sobre o som.
 
