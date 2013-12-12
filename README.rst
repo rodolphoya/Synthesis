@@ -68,7 +68,7 @@ No algorítmo, primeiro gera-se um buffer cheio de números aleatórios, que pod
 
 O modelo matemático de Karplus-Strong é definido por
 
-.. image:: 
+.. image:: http://music.columbia.edu/cmc/musicandcomputers/images/chapter4/kp.algo.jpeg
 
 	
 
