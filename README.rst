@@ -32,13 +32,13 @@ Resumo
 O projeto a ser apresentado consiste na elaboração de um sintetizador de áudio por meio de programação fazendo-se uso da linguagem Python. Neste sintetizador de áudio, o objetivo é de simular o som de um violão acústico, fazendo com que o usuário final possa controlá-lo de maneira intuitiva, através de um teclado musical acoplado ao computador.
 
 Para a criação deste sintetizador, é imprescindível que se tenha conhecimento de conceitos relacionados à análise, processamento e síntese de sinais. Desse modo, a etapa inicial do projeto consistiu no estudo destes elementos apresentados. 
-O sintetizador baseia-se em um modelo de síntese de Karplus-Strong [#]_  no qual um algoritmo é aplicado e diversos controles de variáveis de um sinal são realizados para se obter o som similar ao de um violão desejado. Assim que é decidido como deve ser feita a síntese de áudio, é necessário realiza-la em forma de código. A linguagem utilizada foi o Python, a qual apresenta várias ferramentas úteis ao projeto, além de ser fácil de ser compreendida em geral. Não obstante, foram utilizadas algumas bibliotecas do Python que auxiliaram a elaboração do projeto, executando funções distintas. 
+O sintetizador baseia-se em um modelo de síntese de Karplus-Strong [#]_  no qual um algoritmo é aplicado e diversos controles de variáveis de um sinal são realizados para se obter o som similar ao de um violão desejado. Assim que havia sido decidido como deveria ser feita a síntese de áudio, foi necessário realiza-la em forma de código. A linguagem utilizada foi o Python, a qual apresenta várias recursos úteis ao projeto, além de ser uma linguagem de fácil compreensão [#]_ . Além disso, foram utilizadas algumas bibliotecas do Python que auxiliaram a elaboração do projeto, executando funções distintas. 
 
 A AudioLazy (criada pelo orientador do projeto) é a base de todo o sintetizador. Através desta biblioteca foi possível fazer a manipulação e reprodução dos sinais de áudio. Já a Matplotlib é uma ferramenta que auxilia na visualização do sinal gerado, através da criação de gráficos, baseados nos modelos matemáticos de síntese. Por ultimo, temos a biblioteca PyQt, utilizada no desenvolvimento da interface gráfica.
 
-Para o sintetizador de áudio ser utilizado, é necessário implementar o programa criado em Python em uma interface básica para que qualquer indivíduo pudesse compreender seu funcionamento. Primeiramente, o meio a ser controlado pelo usuário do programa escolhido é um teclado musical MIDI, o qual é conectado ao computador por um cabo MIDI-USB. Entretanto,é necessário também que haja uma interface gráfica que relacione o programa ao teclado conectado e portanto foi criado um ambiente simples no qual o programa criado é rodado sendo assim possível fazer uso do sintetizador.
+Para o sintetizador de áudio ser utilizado, é necessário implementar o programa criado em Python em uma interface básica para que qualquer indivíduo pudesse compreender seu funcionamento. Primeiramente, o controle pelo usuário do programa é feito através de um teclado musical MIDI, o qual pode ser conectado ao computador por um cabo MIDI-USB. Em continuidade, surge a necessidade de uma interface gráfica que torne a experiência do usuário atrativa. Assim, fora criada uma GUI que faz a ligação entre o uso do teclado musical e o sintetizador de áudio.
 
-Por fim, o projeto apresenta uma interessante proposta que ilustra a possibilidade de aplicar conhecimentos de engenharia elétrica e computação não só sobre questões predominantemente científicas, mas também sobre a área de produção artística. 
+Por fim, o projeto apresenta uma proposta que ilustra a possibilidade de aplicar conhecimentos de engenharia elétrica e computação não só sobre questões predominantemente científicas, mas também sobre a área de produção artística. 
 
 
 
@@ -386,7 +386,12 @@ Gostaríamos de agradecer nosso orientador Danilo, por toda a ajuda e suporte du
 
 .. [#] O Modelo de síntese Karplus-Strong é um algoritmo que pega um pequeno sinal de onda e aplica um filtro delay para simular o som de uma corda de instrumento musical ou mesmo alguns tipos de instrumentos de percurssão. Este método, também pode ser visto com um modelo de síntese subtrativa, similar a um filtro combinatório que use a transformada Z
 
+.. [#] "Python é uma linguagem de programação criada por Guido van Rossum em 1991. Os objetivos do projeto da linguagem eram: produtividade e legibilidade. Em outras palavras, Python é uma linguagem que foi criada para produzir código bom e fácil de manter de maneira rápida. Entre as características da linguagem que ressaltam esses objetivos estão:
 
+ - baixo uso de caracteres especiais, o que torna a linguagem muito parecida com pseudo-código executável;
+ - o uso de identação para marcar blocos;
+ - quase nenhum uso de palavras-chave voltadas para a compilação;
+ - coletor de lixo para gerenciar automaticamente o uso da memória;" - PyScience Brasil
 
 
 7.Bibliografia
@@ -405,7 +410,7 @@ and a Dynamic Filter – Journal of Audio Engineering Society – vol 43/n.10 �
 
 Páginas da Web:
 
-
+http://pyscience-brasil.wikidot.com/python:python-oq-e-pq
 
 http://nyrpnz.blogspot.com.br/2012/03/sdl-event-echoer.html - SDL Event Echoer (Código de exemplo para testes de eventos com uso de controle de Xbox)
 
